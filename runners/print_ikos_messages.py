@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#-----------------------------------------------
+#author:  Rohan Krishnamurthy, Christoph Gentsch
+#German Aerospace Center
+#-----------------------------------------------
+
 import sqlite3
 import sys
 

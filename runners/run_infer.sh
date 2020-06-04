@@ -1,11 +1,9 @@
 #!/bin/bash
 
-#----------------------------------------
-#author:  Rohan Krishnamurthy, 
-#rohan.krishnamurthy@dlr.de
+#-----------------------------------------------
+#author:  Rohan Krishnamurthy, Christoph Gentsch
 #German Aerospace Center
-#Year 2020
-#----------------------------------------
+#-----------------------------------------------
 
 LOGFILE=infer-results.log
 
