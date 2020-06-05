@@ -22,7 +22,7 @@ The submitted copy of the paper is available in this repository [here](paper/sas
 
 - `runners/`
 
-  - this folder contains scripts to install and ebǘentually run the tool on Juliet test suite
+  - this folder contains scripts to install and eventually run the tool on Juliet test suite
 
 - `import_log.py/`
 
@@ -32,4 +32,13 @@ The submitted copy of the paper is available in this repository [here](paper/sas
 
   - provides output of the evaluation in CLI, as HTML and as CSV formats
 
+## Usage for Juliet
+
+1. Run main.sh
+    - setup a MySQL-database and import the database.sql script with pre-imported Juliet Manifest and CWE dataset
+2. Run menu.sh
+    - install the SAST tools to test and run the specific "runner"-script
+    - import the generated log file with import_log.py (uncomment the code to select the tool intended to be run)
+    - generate a report with report.py
+    - results in CLI/HTML/CSV formats
 
