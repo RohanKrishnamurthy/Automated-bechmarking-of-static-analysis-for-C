@@ -1,0 +1,23 @@
+--- epan/dissectors/packet-gluster.h	2018-12-20 15:16:12.434157102 +0100
++++ ../packet-gluster.h	2018-12-12 15:25:14.311309000 +0100
+@@ -354,20 +354,6 @@
+ 	GFS3_OP_MAXVALUE
+ };
+
+-/* dir-entry types from libglusterfs/src/compat.h */
+-enum gluster_entry_types {
+-	DT_UNKNOWN = 0,
+-	DT_FIFO = 1,
+-	DT_CHR = 2,
+-	DT_DIR = 4,
+-	DT_BLK = 6,
+-	DT_REG = 8,
+-	DT_LNK = 10,
+-	DT_SOCK = 12,
+-	DT_WHT = 14
+-};
+-
+-
+ /* LOCKING operators come from libglusterfs/src/glusterfs.h */
+
+ /* based on original enum glusterfs_lk_cmds_t */
