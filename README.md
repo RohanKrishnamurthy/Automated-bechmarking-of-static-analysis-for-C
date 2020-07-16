@@ -1,4 +1,4 @@
-# Benchmarking-Open-Source-Static-Analysis-Security-Testing-Tools-for-C
+# Benchmarking Open-Source Static Analyzers for Security Testing
 
 Automated process of evaluation of 11 open source SAST tools for the C programming language on the Juliet Test Suite
 for C/C++ and of six tools on the Wireshark production software.
