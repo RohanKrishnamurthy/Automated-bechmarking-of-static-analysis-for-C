@@ -23,60 +23,40 @@ case $opt in
         "cppcheck")
           sudo apt install -y cppcheck
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_cppcheck.sh
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
+	  ./run_cppcheck.sh
           break
           ;;
         "flawfinder")
           sudo apt install -y flawfinder
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_flawfinder.sh
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
+	  ./run_flawfinder.sh
           break
           ;;
         "pscan")
           sudo apt install -y pscan
           cd ~/sastevaluation/juliet_c_13/runners/
           ./run_pscan.sh
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
           break
           ;;
 	    "frama-c")
           sudo apt install -y frama-c
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_framac.sh
-          cd ~/sastevaluation/juliet_c_13
-          sudo python3 import_log.py
-	      sudo python3 report.py
-          rm -r ~/sastevaluation/juliet_c_13/runners/testcasesupport
+    	  ./run_framac.sh
           break
           ;;
 	    "scan-build")
           pip3 install scan-build
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_scan-build.sh
+	  ./run_scan-build.sh
           mv ~/sastevaluation/C/scan-build-results.log ~/sastevaluation/juliet_c_13/runners
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
           break
           ;;
 	    "sparse")
 	      sudo apt install -y sparse
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_sparse.sh
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
-          rm -r ~/sastevaluation/juliet_c_13/runners/testcasesupport
+          ./run_sparse.sh
           break
           ;;
 	    "ikos")
@@ -84,12 +64,7 @@ case $opt in
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cp -r ~/sastevaluation/C/testcases ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_ikos.sh
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
-          rm -r ~/sastevaluation/juliet_c_13/runners/testcasesupport
-          rm -r ~/sastevaluation/juliet_c_13/runners/testcases
+          ./run_ikos.sh
           break
           ;;
 	    "infer")
@@ -99,12 +74,7 @@ case $opt in
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cp -r ~/sastevaluation/C/testcases ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
-	      ./run_infer.sh
-          cd ~/sastevaluation/juliet_c_13
-	      sudo python3 import_log.py
-	      sudo python3 report.py
-          rm -r ~/sastevaluation/juliet_c_13/runners/testcasesupport
-          rm -r ~/sastevaluation/juliet_c_13/runners/testcases
+	  ./run_infer.sh
           break
           ;;
         "oclint")
@@ -114,9 +84,6 @@ case $opt in
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
           ./run_oclint.sh
-          cd ~/sastevaluation/juliet_c_13
-          sudo python3 import_log.py
-          sudo python3 report.py
           break
           ;;
        "adlint")
@@ -127,9 +94,6 @@ case $opt in
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
           ./run_adlint.sh
-          cd ~/sastevaluation/juliet_c_13
-          sudo python3 import_log.py
-          sudo python3 report.py
           break
           ;;
         *) echo "invalid option";;
