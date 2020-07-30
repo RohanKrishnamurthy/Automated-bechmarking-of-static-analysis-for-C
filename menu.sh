@@ -32,6 +32,12 @@ case $opt in
 	  ./run_flawfinder.sh
           break
           ;;
+	 "clang-tidy"
+	   sudo apt install -y clang-tidy-4.0
+	   cd ~/sastevaluation/juliet_c_13/runners/
+	  ./run_clang_tidy.sh
+          break
+          ;;
         "pscan")
           sudo apt install -y pscan
           cd ~/sastevaluation/juliet_c_13/runners/
