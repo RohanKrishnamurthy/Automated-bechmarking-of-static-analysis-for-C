@@ -39,14 +39,14 @@ The submitted copy of the paper is available in this repository [here](paper/sas
 ## Evaluation procedure
 
 1. Run main.sh
-    - setup a MySQL-database and import the database.sql script with pre-imported Juliet Manifest and CWE dataset
+    - setup a MySQL-database and import the database.sql script with pre-imported Juliet Manifest and CWE dataset (database configuration details, see script)
 2. Run menu.sh
     - install the SAST tools to test and run the specific "runner"-script
     - choose the tool to be evaluated and wait for the process to complete (Note: wait times are different for each and every tool)
 3. Run report.sh (Prerequisite: All tools were run and tool reports are available)
     - import the generated log file with import_log.py 
     - generate a report with report.py
-    - results in CLI/HTML/CSV formats
+    - results in CLI/HTML formats (file "report.html")
 3. For production software Wireshark:
     - cd sard-94 and run the specific "runner"-script
     - import the generated log file with import_log.py (uncomment the code to select the tool intended to be run)
