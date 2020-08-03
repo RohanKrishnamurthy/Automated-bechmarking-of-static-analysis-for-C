@@ -12,4 +12,5 @@ then
 	rm $LOGFILE
 fi
 
+cd ~/sastevaluation/C
 scan-build make individuals -j4 2> $LOGFILE
