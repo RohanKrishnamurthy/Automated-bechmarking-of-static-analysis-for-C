@@ -53,7 +53,7 @@ case $opt in
           break
           ;;
 	    "scan-build")
-          pip3 install scan-build
+          sudo apt install -y clang-tools-4.0
           cd ~/sastevaluation/juliet_c_13/runners/
 	  ./run_scan-build.sh
           mv ~/sastevaluation/C/scan-build-results.log ~/sastevaluation/juliet_c_13/runners
