@@ -15,7 +15,7 @@ fi
 for i in $(find ~/sastevaluation/C testcases -type f -iregex ".*CWE.*[0-9]+\.c" \! -name "*w32*"); do
 	echo "processing $i"
 	FILENAME=$(echo $i|sed -r "s/.*\/(.*\.[c|h])/\1/")
-	~/infer-linux64-v0.17.0/bin/infer run -a checkers -- clang -I./testcasesupport -DINCLUDEMAIN -c $i 2>>$LOGFILE
+	~/sastevaluation/infer-linux64-v0.17.0/bin/infer run -a checkers -- clang -I./testcasesupport -DINCLUDEMAIN -c $i 2>>$LOGFILE
 	rm `echo $FILENAME | sed -r "s/\.c$/.o/"`
 done
 
