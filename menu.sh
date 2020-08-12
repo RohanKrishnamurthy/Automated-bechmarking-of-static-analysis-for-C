@@ -79,7 +79,7 @@ case $opt in
 	    "infer")
           cd sastevaluation
           wget https://github.com/facebook/infer/releases/download/v0.17.0/infer-linux64-v0.17.0.tar.xz
-          tar -zxvf infer-linux64-v0.17.0.tar.xz && rm infer-linux64-v0.17.0.tar.xz
+          tar -xvJf infer-linux64-v0.17.0.tar.xz && rm infer-linux64-v0.17.0.tar.xz
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cp -r ~/sastevaluation/C/testcases ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
