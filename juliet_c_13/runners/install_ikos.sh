@@ -4,8 +4,8 @@ echo -e "#######################################################################
 echo -e "INSTALLING IKOS Tool "
 echo -e "###################################################################################### "
 sudo apt install -y doxygen
-sudo apt install libcgal-dev
-sudo apt install libcgal-demo
+sudo apt install -y libcgal-dev
+sudo apt install -y libcgal-demo
 echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main" | sudo tee -a /etc/apt/sources.list
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 sudo apt-get update
