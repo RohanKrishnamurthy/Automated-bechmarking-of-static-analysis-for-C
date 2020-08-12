@@ -35,6 +35,7 @@ case $opt in
 	 "clang-tidy")
 	   sudo apt install -y clang-tidy-4.0
 	   cd ~/sastevaluation/juliet_c_13/runners/
+	   chmod +x run_clang_tidy.sh
 	  ./run_clang_tidy.sh
           break
           ;;
@@ -66,6 +67,8 @@ case $opt in
           break
           ;;
 	    "ikos")
+	  cd ~/sastevaluation/juliet_c_13/runners/
+	  chmod +x install_ikos.sh
           ./install_ikos.sh
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cp -r ~/sastevaluation/C/testcases ~/sastevaluation/juliet_c_13/runners/
