@@ -96,7 +96,6 @@ case $opt in
           break
           ;;
        "adlint")
-          cd sastevaluation
           sudo apt-get install gcc-6
           sudo apt install ruby-full
           sudo gem install adlint --no-ri --no-rdoc
