@@ -16,7 +16,7 @@ echo -e "#######################################################################
 
 echo "*******************"
 PS3='Select an option and press Enter: '
-options=("cppcheck" "flawfinder" "pscan" "frama-c" "scan-build" "sparse" "ikos" "infer" "oclint" "adlint")
+options=("cppcheck" "flawfinder" "clang-tidy" "pscan" "frama-c" "scan-build" "sparse" "ikos" "infer" "oclint" "adlint")
 select opt in "${options[@]}"
 do
 case $opt in
