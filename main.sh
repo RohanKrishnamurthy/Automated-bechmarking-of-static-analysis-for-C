@@ -12,10 +12,10 @@ echo -e "#######################################################################
 echo -e "INSTALLING pre-requisits "
 echo -e "###################################################################################### "
 
-sudo apt update
+sudo apt -y update
 sudo apt install -y git
-sudo apt install python2.7
-sudo apt install python3.6
+sudo apt install -y python2.7
+sudo apt install -y python3.6
 sudo apt install -y python-pip
 sudo apt install -y python3-pip
 sudo apt install -y python3-mysqldb
@@ -37,42 +37,54 @@ echo -e "Building the makefile "
 cd C && make
 echo -e "###################################################################################### "
 
-
 echo -e "###################################################################################### "
 echo -e "Install-Start-Enable Mysql"
 echo -e "###################################################################################### "
-sudo apt update
+sudo apt -y update
 sudo apt install -y mysql-server
 sudo mysql_secure_installation utility
-#Note: You will be prompted to validate the password.
-#1. Hit y|Y
-#2. Choose the strength of the password: 0-1-2
-#3. Enter New password: root
-#4. Re-enter  new password: root
-#5. Hit y|Y to continue
-#6. Remove anonymous users? : Hit y|Y
-#7. Disallow root login remotely? : Hit y|Y
-#8. Remove test database and access to it? : Hit y|Y
-#9. Reload privlege tables now? : Hit y|Y
-#10. All done!
+sudo apt -y install expect
+
+MYSQL_ROOT_PASSWORD=root
+
+SECURE_MYSQL=$(sudo expect -c "
+set timeout 10
+
+spawn mysql_secure_installation
+
+expect \"Enter current password for root (enter for none):\"
+send \"$MYSQL_ROOT_PASSWORD\r\"
+
+expect \"Enter re-enter password for root (enter for none):\"
+send \"$MYSQL_ROOT_PASSWORD\r\"
+
+expect \"Change the root password?\"
+send \"y\r\"
+
+expect \"Remove anonymous users?\"
+send \"y\r\"
+
+expect \"Disallow root login remotely?\"
+send \"y\r\"
+
+expect \"Remove test database and access to it?\"
+send \"y\r\"
+
+expect \"Reload privilege tables now?\"
+send \"y\r\"
+
+expect eof
+")
+
+echo "${SECURE_MYSQL}"
+
 sudo ufw allow mysql
 sudo systemctl start mysql
 sudo systemctl enable mysql
-sudo mysql -u root -p --execute="create database samate; use samate; source database.sql;"
-#Note: Enter Password: root
-echo -e "database uploaded successfully"
+sudo mysql -u root --execute="create database samate; use samate; source database.sql;"
+sudo apt -y purge expectecho -e "database uploaded successfully"
 echo -e "###################################################################################### "
 echo -e "###################################################################################### "
 echo -e "Initiation Complete"
 echo -e "###################################################################################### "
 echo -e "###################################################################################### "
-
-
-
-
-
-
-
-
-
-
