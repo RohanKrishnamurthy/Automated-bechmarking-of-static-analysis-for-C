@@ -42,7 +42,7 @@ echo -e "Install-Start-Enable Mysql"
 echo -e "###################################################################################### "
 sudo apt -y update
 sudo apt install -y mysql-server
-sudo mysql_secure_installation utility
+
 sudo apt -y install expect
 
 MYSQL_ROOT_PASSWORD=root
