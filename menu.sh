@@ -96,9 +96,9 @@ case $opt in
           break
           ;;
        "adlint")
-          sudo apt-get install gcc-6
-          sudo apt install ruby-full
-          sudo gem install adlint --no-ri --no-rdoc
+          sudo apt-get install -y gcc-6
+          sudo apt install -y ruby-full
+          sudo gem install -y adlint --no-ri --no-rdoc
           cp -r ~/sastevaluation/C/testcasesupport ~/sastevaluation/juliet_c_13/runners/
           cd ~/sastevaluation/juliet_c_13/runners/
           ./run_adlint.sh
