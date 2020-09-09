@@ -81,7 +81,7 @@ echo "${SECURE_MYSQL}"
 sudo ufw allow mysql
 sudo systemctl start mysql
 sudo systemctl enable mysql
-sudo mysql -u root -$MYSQL_ROOT_PASSWORD --execute="create database samate; use samate; source database.sql;"
+sudo mysql -u root -p$MYSQL_ROOT_PASSWORD --execute="create database samate; use samate; source database.sql;"
 sudo apt -y purge expect
 
 echo -e "###################################################################################### "
