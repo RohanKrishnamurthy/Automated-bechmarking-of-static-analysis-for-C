@@ -77,12 +77,13 @@ expect eof
 ")
 
 echo "${SECURE_MYSQL}"
+sudo apt -y purge expect
 
 sudo ufw allow mysql
 sudo systemctl start mysql
 sudo systemctl enable mysql
-sudo mysql -u root -p$MYSQL_ROOT_PASSWORD --execute="create database samate; use samate; source database.sql;"
-sudo apt -y purge expect
+sudo mysql -u root -p --execute="create database samate; use samate; source database.sql;"
+#Enter the password "root" manually
 
 echo -e "###################################################################################### "
 echo -e "Initiation Complete"
