@@ -24,7 +24,7 @@ The submitted copy of the paper is available in this repository [here](paper/sas
 
   - this folder contains scripts to install and eventually run the tool on Juliet test suite
 
- `report.sh`
+- `report.sh`
 
   - imports tools reports and generates evaluation report
 
