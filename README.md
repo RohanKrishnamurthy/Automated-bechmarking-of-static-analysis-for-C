@@ -20,21 +20,17 @@ The submitted copy of the paper is available in this repository [here](paper/sas
 
   - runs the evaluation of the SAST tool of your choice (out of the installed 11 tools)
 
-- `report.sh`
-
-  - imports tools reports and generates evaluation report
-
 - `runners/`
 
   - this folder contains scripts to install and eventually run the tool on Juliet test suite
 
-- `import_log.py`
+ `report.sh`
 
-  - imports the results from the tools
-
-- `report.py`
+  - imports tools reports and generates evaluation report
 
   - provides output of the evaluation in CLI, as HTML and as CSV formats
+  
+ 
 
 ## Evaluation procedure
 
