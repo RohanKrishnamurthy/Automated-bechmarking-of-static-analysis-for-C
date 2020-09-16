@@ -1,0 +1,7 @@
+[
+	{
+		"directory":"/home/mypc/sastevaluation/juliet_c_13/runners",
+		"command": "/usr/bin/clang-4.0 -c testcases/CWE190_Integer_Overflow/s06/CWE190_Integer_Overflow__int_max_postinc_06.c",
+		"file": "testcases/CWE190_Integer_Overflow/s06/CWE190_Integer_Overflow__int_max_postinc_06.c"
+	}
+]

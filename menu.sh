@@ -77,7 +77,6 @@ case $opt in
           ;;
 	    "ikos")
 	  cd ~/sastevaluation/juliet_c_13/runners/
-	  chmod +x install_ikos.sh
           ./install_ikos.sh
           cd ~/sastevaluation/juliet_c_13/runners/
           ./run_ikos.sh
