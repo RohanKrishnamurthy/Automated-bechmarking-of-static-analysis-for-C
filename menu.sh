@@ -46,7 +46,6 @@ case $opt in
 	 "clang-tidy")
 	   sudo apt install -y clang-4.0 clang-tidy-4.0
 	   cd ~/sastevaluation/juliet_c_13/runners/
-	   chmod +x run_clang_tidy.sh
 	  ./run_clang_tidy.sh
           break
           ;;
@@ -78,7 +77,6 @@ case $opt in
 	    "ikos")
 	  cd ~/sastevaluation/juliet_c_13/runners/
           ./install_ikos.sh
-          cd ~/sastevaluation/juliet_c_13/runners/
           ./run_ikos.sh
           break
           ;;
