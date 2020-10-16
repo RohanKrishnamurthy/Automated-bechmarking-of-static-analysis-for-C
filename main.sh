@@ -59,7 +59,7 @@ expect \"Enter re-enter password for root (enter for none):\"
 send \"$MYSQL_ROOT_PASSWORD\r\"
 
 expect \"Change the root password?\"
-send \"y\r\"
+send \"n\r\"
 
 expect \"Remove anonymous users?\"
 send \"y\r\"
