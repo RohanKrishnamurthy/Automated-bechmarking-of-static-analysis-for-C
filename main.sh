@@ -82,7 +82,7 @@ sudo apt -y purge expect
 sudo ufw allow mysql
 sudo systemctl start mysql
 sudo systemctl enable mysql
-sudo mysql -u root -proot --execute="create database samate; use samate; source database.sql;"
+sudo mysql -u root -proot --execute="create database samate; use samate; source ~/sastevaluation/database.sql;"
 
 echo -e "###################################################################################### "
 echo -e "Initiation Complete"
